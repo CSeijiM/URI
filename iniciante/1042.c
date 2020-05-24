@@ -2,51 +2,34 @@
 
 int main()
 {
-    int v1=0,v2=0,v3=0,o1=0,o2=0,o3=0;
-    scanf("%d%d%d", &v1,&v2,&v3);
+    int v1=0,v2=0,v3=0,o1=0,o2=0,o3=0,aux;
+    scanf("%d%d%d", &o1,&o2,&o3);
     
-    if(v1<v2 && v1<v3)
+    v1 = o1;
+    v2 = o2;
+    v3 = o3;
+
+    if(o1>o2)
     {
-        o1 = v1; 
-        if(v2<v3)
-        {
-            o2 = v2;
-            o3 = v3;
-        }
-        else
-            o2 = v3;
-            o3 = v2;
+        aux = o2;
+        o2 = o1;
+        o1 = aux;
     }
-    else if(v2<v1 && v2<v3)
+    if(o2>o3)
     {
-        o1 = v2; 
-        if(v1<v3)
-        {
-            o2 = v1;
-            o3 = v3;
-        }
-        else
-            o2 = v3;
-            o3 = v1;
+        aux = o3;
+        o3 = o2;
+        o2 = aux;
     }
-    else if(v3<v1 && v3<v2)
+
+    if(o1>o2)
     {
-        o1 = v3;
-        if(v1<v2)
-        {
-            o2 = v1;
-            o3 = v2;
-        }
-        else
-            o2 = v1;
-            o3 = v2;
+        aux = o2;
+        o2 = o1;
+        o1 = aux;
     }
-    else
-    {
-        o1 =v1;
-        o2 =v2;
-        o3 =v3;
-    }
+
+
 
     printf("%d\n",o1);
     printf("%d\n",o2);

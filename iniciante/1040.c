@@ -22,7 +22,7 @@ int main()
     {
         printf("Aluno em exame.\n");
         scanf("%lf",&exame);
-        printf("Nota do exame %.1lf\n", exame);
+        printf("Nota do exame: %.1lf\n", exame);
         media = (media+exame)/2;
         if(media>5)
         {
