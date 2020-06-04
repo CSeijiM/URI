@@ -18,9 +18,8 @@ int main(){
         }
         
         t=(M[N-1][N-1]);
-
+        dig=0;
         do{
-            t%10;
             t=t/10;
             dig++;
         } while (t>0);
