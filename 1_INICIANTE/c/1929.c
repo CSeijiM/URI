@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<malloc.h>
 
 void ordenar(int *valor1, int *valor2){
     int aux;
@@ -14,13 +13,9 @@ int main(){
     int a,b,c,d;
     void ordenar(int *,int *);
 
-    // a=malloc(sizeof(int));
-    // b=malloc(sizeof(int));
-    // c=malloc(sizeof(int));
-    // d=malloc(sizeof(int));
-
     scanf("%d %d %d %d",&a,&b,&c,&d);
 
+    //Here I used ordened values.
     ordenar(&a, &b);
     ordenar(&b, &c);
     ordenar(&c, &d);
@@ -31,11 +26,14 @@ int main(){
 
     ordenar(&a, &b);
 
-    if(d>){
-
+    //Here I tested triangle exitence.
+    if(d<c+b){  //I used the 3 highest values to test triangle. 
+        printf("S\n");
     }
-
-    printf("%d %d %d %d\n",a,b,c,d);
-    
+    else if(c<b+a){ // If the 3 highest values dont form a triangle, i discarted the highest one, and tried form another triangle with the rest.
+        printf("S\n");
+    }
+    else printf("N\n");
+        
     return 0;
 }
