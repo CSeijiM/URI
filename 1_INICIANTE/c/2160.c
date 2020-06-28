@@ -1,20 +1,18 @@
 #include<stdio.h>
-#include<string.h>
 
 int main(){
     char L[501];
     int i=0;
-    scanf("%s",L);
+    fgets(L,501,stdin);
 
-    while(L[i]!= "\0"){
-        printf("%c",L[i]);
-        i++;
+    while(L[i]!='\0'){
+        i++;         
     }
-    // if(strlen(L)>80){
-    //     printf("NO\n");
-    // }
-    // else printf("YES\n");
-
-    // printf("%c",L[4]);
+    if(i<=81){
+        printf("YES\n");
+    }
+    else{
+        printf("NO\n");
+    }   
     return 0;
 }
