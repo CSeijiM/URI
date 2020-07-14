@@ -1,3 +1,3 @@
 SELECT id, name
 FROM products
-WHERE 
+WHERE price < 10 AND price > 100;
